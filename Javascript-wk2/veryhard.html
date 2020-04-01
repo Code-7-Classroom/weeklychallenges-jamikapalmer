@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Very Hard!</h1>
+    <script>
+        var inputNum1 = prompt('Please enter a number');
+        var inputNum2 = prompt('Please enter another number');
+        var inputOperator = prompt("Please enter an operator");
+
+        switch(inputOperator.toString()){
+            case '+':
+            console.log(inputNum1 + " + " + inputNum2 + " = " + (parseInt(inputNum1) + parseInt(inputNum2)));
+                break;
+        } 
+
+        switch(inputOperator.toString()){
+            case '-':
+                console.log(inputNum1 + " - " + inputNum2 + " = " + (parseInt(inputNum1) - parseInt(inputNum2)));
+                break;
+        }
+
+        switch(inputOperator.toString()){
+            case '*':
+                console.log(inputNum1 + " * " + inputNum2 + " = " + (parseInt(inputNum1) * parseInt(inputNum2)));
+                break;
+        }
+
+        switch(inputOperator.toString()){
+            case '/':
+                console.log(inputNum1 + " / " + inputNum2 + " = " + (parseInt(inputNum1) / parseInt(inputNum2)));
+                break;
+        }
+    </script>
+</body>
+</html>
