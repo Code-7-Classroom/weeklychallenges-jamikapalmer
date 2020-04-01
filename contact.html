@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5cb7f6d65b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <header id="header">
+        <div class="form">
+            <form class="searchbar">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" placeholder="Search" name="search" class="search">
+                <label for="search" class="hidden">Search</label>
+            </form>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="Img/Logo.png" id="logo-img" alt="logo"></img></a>
+        </div>
+        <div class="lih">
+            <a href="#" class="lih-link">Login</a>
+            <a href="#" class="lih-link">Cart(0)</a>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href ="shirts.html">Shirts</a></li>
+            <li><a href="pants.html">Pants</a></li>
+            <li><a href ="pajamas.html">Pajamas</a></li>
+            <li><a href ="shoes.html">Shoes</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 class="title">Contact Us</h1>
+        <div id="error"></div>
+        <form id="form" name="contactForm" action="#" method="GET">
+            <div class="container">
+              <label for="fname" class="form-fields">First Name</label>
+              <input type="text" id="fname" name="firstname" class="form-fields">
+              <label for="lname" class="form-fields">Last Name</label>
+              <input type="text" id="lname" name="lastname" class="form-fields">
+              <label for="email" class="form-fields">E-mail</label>
+              <input type="text" id="email" name="E-mail" class="form-fields">
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" class="form-fields"></textarea>
+              <button type="submit" value="Submit" class="submit">Submit</button>
+          </div>
+        </form>
+          <div class="img-container">
+              <img src="Img/contact-img.jpg" height="200px" >
+          </div>
+    </main>
+    <footer id="footer">
+        <div class="links">
+            <ul class="links-ul">          
+                <li><a href="about.html">About</a></li>
+                <li><a href="policies.html">Shipping & Returns</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contect Us</a></li>
+            </ul>
+        </div>
+        <div class="socials">
+            <img src="https://img.icons8.com/material/16/000000/facebook-new.png"/>
+            <img src="https://img.icons8.com/material/16/000000/instagram-new--v1.png"/>
+            <img src="https://img.icons8.com/material/16/000000/pinterest--v1.png"/>
+        </div>
+        <!-- <div class="info-grab"> -->
+        <form class="info-grab">
+            <div class="user-info">
+                <label for="email">Sign up to receive discounts!</label>
+                <br>
+                <input type="text" name="email" placeholder="E-mail" class="email">
+                <button name="submit" type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+        <!-- </div> -->
+        <div class="copyright">
+            <p>&copy;2020 For the Boys!</p>
+        </div>
+        <div class="payments">
+            <img src="https://img.icons8.com/color/16/000000/paypal.png"/>
+            <img src="https://img.icons8.com/color/16/000000/visa.png"/>
+            <img src="https://img.icons8.com/color/16/000000/mastercard.png"/>
+            <img src="https://img.icons8.com/color/16/000000/card-security.png"/>
+        </div>
+    </footer>
+
+    <script>
+        const fname = document.getElementById('fname')
+        const lname = document.getElementById('lname')
+        const email = document.getElementById('email')
+        const form = document.getElementById('form')
+        const errorElement = document.getElementById('error')
+
+        form.addEventListener('submit', (e) => {
+        let messages = []
+        if (fname.value === '' || fname.value == null) {
+            messages.push('*First Name required')
+        }
+        if (lname.value === '' || lname.value == null) {
+            messages.push('*Last Name required')
+        }
+        if (email.value === '' || email.value == null) {
+            messages.push('*E-mail required')
+        }
+        if (messages.length > 0) {
+            e.preventDefault()
+            errorElement.innerText = messages.join(' ')
+        }
+        })
+    </script>
+</body>
+</html>

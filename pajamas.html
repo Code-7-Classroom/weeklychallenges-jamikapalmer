@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5cb7f6d65b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Pajamas</title>
+</head>
+<body>
+    <header id="header">
+        <div class="form">
+            <form class="searchbar">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" placeholder="Search" name="search" class="search">
+                <label for="search" class="hidden">Search</label>
+            </form>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img alt="logo image" src="Img/Logo.png" id="logo-img" alt="logo"></img></a>
+        </div>
+        <div class="lih">
+            <a href="#" class="lih-link">Login</a>
+            <a href="#" class="lih-link">Cart(0)</a>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href ="shirts.html">Shirts</a></li>
+            <li><a href="pants.html">Pants</a></li>
+            <li><a href ="pajamas.html">Pajamas</a></li>
+            <li><a href ="shoes.html">Shoes</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Control buttons -->
+        <div id="filterContainer">
+            <button class="btn" onclick="filterSelection('longjohns')"> Longjohns</button>
+            <button class="btn" onclick="filterSelection('print')"> Animal Fun</button>
+            <button class="btn" onclick="filterSelection('silkSets')"> Silk Sets</button>
+            <button class="btn" onclick="filterSelection('under15')"> Under $15</button>
+        </div>
+        <div class="product-display">
+            <div class="card print under15">
+                <img src="Img/dinoset.jpg" alt="Dinosaur Pajamas" class="card-img">               
+                    <h1>Dino's Pajama Set</h1>
+                    <p class="price">$10.99</p>
+                    <p>Fun, dinosaur print pajama set.</p>
+            </div>
+            <div class="card longjohns under15">
+                <img src="Img/dark-longjohns.jpg" alt="Dark Colored Pajamas" class="card-img">
+                <h1>Samson's Longjohns</h1>
+                <p class="price">$12.99</p>
+                <p>Warm long johns in dark, cool tones.</p>
+            </div>
+            <div class="card silkSets">
+                <img src="Img/fancysets.jpg" alt="Fancy Pajamas" class="card-img">
+                <h1>Tyson's Silk Set</h1>
+                <p class="price">$19.99</p>
+                <p>Silk/satin pajama set.</p>
+            </div>
+            <div class="card silkSets">
+                <img src="Img/fancysets-2.jpg" alt="Fancy Pajamas" class="card-img">
+                <h1>Tiko's Silk Set</h1>
+                <p class="price">$19.99</p>
+                <p>Silk/satin pajama set.</p>
+            </div>
+            <div class="card longjohns under15">
+                <img src="Img/neutral-longjohns.jpg" alt="Neutral Pajamas" class="card-img">
+                <h1>Jessie's Longjohns</h1>
+                <p class="price">$12.99</p>
+                <p>Warm long johns in neutral tones.</p>
+              </div>
+              <div class="card print under15">
+                <img src="Img/lionset.png" alt="Lion Pajamas" class="card-img">
+                <h1>Leo's Lion Pajama Set</h1>
+                <p class="price">$10.99</p>
+                <p>Fun, dinosaur print pajama set.</p>
+              </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="links">
+            <ul class="links-ul">          
+                <li><a href="about.html">About</a></li>
+                <li><a href="policies.html">Shipping & Returns</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contect Us</a></li>
+            </ul>
+        </div>
+        <div class="socials">
+            <img src="https://img.icons8.com/material/16/000000/facebook-new.png"/>
+            <img src="https://img.icons8.com/material/16/000000/instagram-new--v1.png"/>
+            <img src="https://img.icons8.com/material/16/000000/pinterest--v1.png"/>
+        </div>
+        <!-- <div class="info-grab"> -->
+        <form class="info-grab">
+            <div class="user-info">
+                <label for="email">Sign up to receive discounts!</label>
+                <br>
+                <input type="text" name="email" placeholder="E-mail" class="email">
+                <button name="submit" type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+        <!-- </div> -->
+        <div class="copyright">
+            <p>&copy;2020 For the Boys!</p>
+        </div>
+        <div class="payments">
+            <img src="https://img.icons8.com/color/16/000000/paypal.png"/>
+            <img src="https://img.icons8.com/color/16/000000/visa.png"/>
+            <img src="https://img.icons8.com/color/16/000000/mastercard.png"/>
+            <img src="https://img.icons8.com/color/16/000000/card-security.png"/>
+        </div>
+    </footer>
+    <script>
+        function filterSelection(classname){
+            //select all cards
+            var allcards = document.getElementsByClassName("card");
+            //hide all cards
+            for(let i = 0; i < allcards.length; i++){
+                allcards[i].style.display = 'none';
+            }
+    
+            //select all desired cards
+            var elements = document.getElementsByClassName(classname);
+            //show desired card
+            for(let i = 0; i < elements.length; i++){
+                elements[i].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

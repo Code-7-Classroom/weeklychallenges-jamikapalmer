@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5cb7f6d65b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Shoes</title>
+</head>
+<body>
+    <header id="header">
+        <div class="form">
+            <form class="searchbar">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" placeholder="Search" name="search" class="search">
+                <label for="search" class="hidden">Search</label>
+            </form>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img alt="logo" src="Img/Logo.png" id="logo-img" alt="logo"></img></a>
+        </div>
+        <div class="lih">
+            <a href="#" class="lih-link">Login</a>
+            <a href="#" class="lih-link">Cart(0)</a>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href ="shirts.html">Shirts</a></li>
+            <li><a href="pants.html">Pants</a></li>
+            <li><a href ="pajamas.html">Pajamas</a></li>
+            <li><a href ="shoes.html">Shoes</a></li>
+        </ul>
+    </nav>
+    <main>
+        <button class="btn" onclick="filterSelection('sandals')"> Sandals</button>
+        <button class="btn" onclick="filterSelection('dress')"> Dress</button>
+        <button class="btn" onclick="filterSelection('sneakers')"> Sneakers</button>
+        <button class="btn" onclick="filterSelection('under20')"> Under $20</button>
+        <div class="product-display">
+            <div class="card sneakers under20">
+                <img src="Img/canvas-sneaker.png" alt="Canvas Sneaker" class="card-img">
+                <h1>Danny's Canvas Sneaker</h1>
+                <p class="price">$19.99</p>
+                <p>Cool canvas sneaker in an array of colors </p>
+            </div>
+            <div class="card sneakers under20">
+                <img src="Img/converse.png" alt="Converse-like Sneaker" class="card-img">
+                <h1>Chuck's Taylors</h1>
+                <p class="price">$19.99</p>
+                <p>Cool coverse inspired sneaker in an array of colors</p>
+            </div>
+            <div class="card sandals">
+                <img src="Img/jesus-sandals.png" alt="Jesus Sandals" class="card-img">
+                <h1>Jesus' Sandals</h1>
+                <p class="price">$19,000.99</p>
+                <p>Authenitic and orignal heirloom sandals.</p>
+            </div>
+            <div class="card sandals">
+                <img src="Img/open-toe.png" alt="Open Toe Sandal" class="card-img">
+                <h1>Jesus' Sandals</h1>
+                <p class="price">$15,000.99</p>
+                <p>Authenitic and orignal heirloom sandals.</p>
+            </div>
+            <div class="card dress under20">
+                <img src="Img/star-dresss-shoes.png" alt="Star Punched Shoes" class="card-img">
+                <h1>Charles'</h1>
+                <p class="price">$19.99</p>
+                <p>Star statement dress shoes</p>
+              </div>
+              <div class="card dress under20">
+                <img src="Img/leathershoe.png" alt="Leather Shoes" class="card-img">
+                <h1>Zach's Shoes</h1>
+                <p class="price">$19.99</p>
+                <p>Casual leather shoes.</p>
+              </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="links">
+            <ul class="links-ul">          
+                <li><a href="about.html">About</a></li>
+                <li><a href="policies.html">Shipping & Returns</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contect Us</a></li>
+            </ul>
+        </div>
+        <div class="socials">
+            <img alt="social media icon" src="https://img.icons8.com/material/16/000000/facebook-new.png"/>
+            <img alt="social media icon" src="https://img.icons8.com/material/16/000000/instagram-new--v1.png"/>
+            <img alt="social media icon" src="https://img.icons8.com/material/16/000000/pinterest--v1.png"/>
+        </div>
+        <!-- <div class="info-grab"> -->
+        <form class="info-grab">
+            <div class="user-info">
+                <label for="email">Sign up to receive discounts!</label>
+                <br>
+                <input type="text" name="email" placeholder="E-mail" class="email">
+                <button name="submit" type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+        <!-- </div> -->
+        <div class="copyright">
+            <p>&copy;2020 For the Boys!</p>
+        </div>
+        <div class="payments">
+            <img alt="payment icon" src="https://img.icons8.com/color/16/000000/paypal.png"/>
+            <img alt="payment icon" src="https://img.icons8.com/color/16/000000/visa.png"/>
+            <img alt="payment icon" src="https://img.icons8.com/color/16/000000/mastercard.png"/>
+            <img alt="payment icon" src="https://img.icons8.com/color/16/000000/card-security.png"/>
+        </div>
+    </footer>
+    <script>
+        function filterSelection(classname){
+            //select all cards
+            var allcards = document.getElementsByClassName("card");
+            //hide all cards
+            for(let i = 0; i < allcards.length; i++){
+                allcards[i].style.display = 'none';
+            }
+    
+            //select all desired cards
+            var elements = document.getElementsByClassName(classname);
+            //show desired card
+            for(let i = 0; i < elements.length; i++){
+                elements[i].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

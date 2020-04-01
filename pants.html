@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5cb7f6d65b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Pants</title>
+</head>
+<body>
+    <header id="header">
+        <div class="form">
+            <form class="searchbar">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" placeholder="Search" name="search" class="search">
+                <label for="search" class="hidden">Search</label>
+            </form>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img alt="logo image" src="Img/Logo.png" id="logo-img" alt="logo"></img></a>
+        </div>
+        <div class="lih">
+            <a href="#" class="lih-link">Login</a>
+            <a href="#" class="lih-link">Cart(0)</a>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href ="shirts.html">Shirts</a></li>
+            <li><a href="pants.html">Pants</a></li>
+            <li><a href ="pajamas.html">Pajamas</a></li>
+            <li><a href ="shoes.html">Shoes</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="filterContainer">
+            <button class="btn active" onclick="filterSelection('shorts')">Shorts</button>
+            <button class="btn" onclick="filterSelection('joggers')"> Joggers</button>
+            <button class="btn" onclick="filterSelection('under15')"> Under $15</button>
+        </div>
+        <div class="product-display">
+            <div class="card joggers">
+                <img src="Img/brown-overalls.jpg" alt="Brown Overalls" style="width:100%" class="card-img">
+                <h1>Seth's Overalls</h1>
+                <p class="price">$19.99</p>
+                <p>Linen overalls perfect for the summer.</p>
+            </div>
+            <div class="card joggers">
+                <img src="Img/neutral-joggers.jpg" alt="Neutral Colored Jogger" style="width:100%" class="card-img">
+                <h1>Cam's Joggers</h1>
+                <p class="price">$15.99</p>
+                <p>Athletic joggers in hard to find neutral tones.</p>
+            </div>
+            <div class=" card joggers under15">
+                <img src="Img/dark-joggers.jpg" alt="Dark Toned Joggers" style="width:100%" class="card-img">
+                <h1>Bryan's Harem Pants</h1>
+                <p class="price">$12.99</p>
+                <p>Loose linen harem style pants.</p>
+            </div>
+            <div class="card shorts under15">
+                <img src="Img/light-shorts.jpg" alt="Pastel Shorts" style="width:100%" class="card-img">
+                <h1>Kyle's Shorts</h1>
+                <p class="price">$10.99</p>
+                <p>Athletic shorts in pastel tones.</p>
+            </div>
+            <div class="card shorts under15">
+                <img src="Img/neutral-shorts.png" alt="Neutral Colored Shorts" style="width:100%" class="card-img">
+                <h1>Tommy's Shorts</h1>
+                <p class="price">$9.99</p>
+                <p>Shorts, shorts in neutral cool tones.</p>
+              </div>
+              <div class="card shorts under15">
+                <img src="Img/green-short.jpg" alt="Green Shorts" style="width:100%" class="card-img">
+                <h1>Gregory's Shorts</h1>
+                <p class="price">$9.99</p>
+                <p>Olive green,linen shorts.</p>
+              </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="links">
+            <ul class="links-ul">          
+                <li><a href="about.html">About</a></li>
+                <li><a href="policies.html">Shipping & Returns</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="socials">
+            <img alt="social media icon" src="https://img.icons8.com/material/16/000000/facebook-new.png"/>
+            <img alt="social media icon" src="https://img.icons8.com/material/16/000000/instagram-new--v1.png"/>
+            <img alt="social media icon" src="https://img.icons8.com/material/16/000000/pinterest--v1.png"/>
+        </div>
+        <!-- <div class="info-grab"> -->
+        <form class="info-grab">
+            <div class="user-info">
+                <label for="email">Sign up to receive discounts!</label>
+                <br>
+                <input type="text" name="email" placeholder="E-mail" class="email">
+                <button name="submit" type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+        <!-- </div> -->
+        <div class="copyright">
+            <p>&copy;2020 For the Boys!</p>
+        </div>
+        <div class="payments">
+            <img alt="payment icon" src="https://img.icons8.com/color/16/000000/paypal.png"/>
+            <img alt="payment icon" src="https://img.icons8.com/color/16/000000/visa.png"/>
+            <img alt="payment icon" src="https://img.icons8.com/color/16/000000/mastercard.png"/>
+            <img alt="payment icon" src="https://img.icons8.com/color/16/000000/card-security.png"/>
+        </div>
+    </footer>
+    <script>
+        function filterSelection(classname){
+            //select all cards
+            var allcards = document.getElementsByClassName("card");
+            //hide all cards
+            for(let i = 0; i < allcards.length; i++){
+                allcards[i].style.display = 'none';
+            }
+    
+            //select all desired cards
+            var elements = document.getElementsByClassName(classname);
+            //show desired card
+            for(let i = 0; i < elements.length; i++){
+                elements[i].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

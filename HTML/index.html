@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5cb7f6d65b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <header id="header">
+        <div class="form">
+            <form class="searchbar">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" placeholder="Search" name="search" class="search">
+                <label for="search" class="hidden">Search</label>
+            </form>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="Img/Logo.png" id="logo-img" alt="logo"></img></a>
+        </div>
+        <div class="lih">
+            <a href="#" class="lih-link">Login</a>
+            <a href="#" class="lih-link">Cart(0)</a>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href ="shirts.html">Shirts</a></li>
+            <li><a href="pants.html">Pants</a></li>
+            <li><a href ="pajamas.html">Pajamas</a></li>
+            <li><a href ="shoes.html">Shoes</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- <div class="hero-image">
+          </div> -->
+    <!-- <img name="slide" width="100%" height="800" src="Img/hero.jpg">
+    <img name="slide" width="100%" height="800" src="Img/hero0.jpg">
+    <img name="slide" width="100%" height="800" src="Img/hero1.jpg">
+    <img name="slide" width="100%" height="800" src="Img/hero2.jpg"> -->
+    <img id="slide" width="100%" height="50%" src="./Img/hero0.jpg">
+    </main>
+    <footer id="footer">
+        <div class="links">
+            <ul class="links-ul">          
+                <li><a href="about.html">About</a></li>
+                <li><a href="policies.html">Shipping & Returns</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contect Us</a></li>
+            </ul>
+        </div>
+        <div class="socials">
+            <img src="https://img.icons8.com/material/16/000000/facebook-new.png"/>
+            <img src="https://img.icons8.com/material/16/000000/instagram-new--v1.png"/>
+            <img src="https://img.icons8.com/material/16/000000/pinterest--v1.png"/>
+        </div>
+        <!-- <div class="info-grab"> -->
+        <form class="info-grab">
+            <div class="user-info">
+                <label for="email">Sign up to receive discounts!</label>
+                <br>
+                <input type="text" name="email" placeholder="E-mail" class="email">
+                <button name="submit" type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+        <!-- </div> -->
+        <div class="copyright">
+            <p>&copy;2020 For the Boys!</p>
+        </div>
+        <div class="payments">
+            <img src="https://img.icons8.com/color/16/000000/paypal.png"/>
+            <img src="https://img.icons8.com/color/16/000000/visa.png"/>
+            <img src="https://img.icons8.com/color/16/000000/mastercard.png"/>
+            <img src="https://img.icons8.com/color/16/000000/card-security.png"/>
+        </div>
+    </footer>
+    <script>
+        var i = 0;
+        var images = [];
+        var time = 3000;
+
+        images[0] = './Img/hero0.jpg';
+        images[1] = './Img/hero1.jpg';
+        images[2] = './Img/hero2.jpg';
+        images[3] = './Img/hero3.jpg';
+
+
+        function changeImg(i){
+            document.getElementById("slide").src = images[i];
+        
+            if(i < images.length -1){
+                i++;
+            } else {
+                i = 0;
+            }
+
+            setTimeout(function(){ changeImg(i); }, time);
+
+        }
+
+        window.onload = changeImg(0);
+        
+    </script>
+</body>
+</html>
