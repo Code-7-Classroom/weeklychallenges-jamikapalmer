@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Medium</h1>
+
+    <script>
+        function cutPizzaSlices(slices){
+            return function sharePizza(people) {
+            return "Each person gets " + (slices / people).toFixed(2) + "slices of pizza";
+    }
+    }
+    var sharePizza = cutPizzaSlices(8)
+        console.log(sharePizza(2));
+        console.log(sharePizza(3));
+        
+
+    </script>
+</body>
+</html>
