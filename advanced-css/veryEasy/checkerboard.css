@@ -1,0 +1,37 @@
+#checkerboard{
+    height: 700px;
+    width: 700px;
+}
+
+.checkerboard__rowA{
+    display: flex;
+    flex-direction: row;
+}
+.checkerboard__rowB{
+    display: flex;
+    flex-direction: row;
+}
+.checkerboard__rowA__black{
+    background: black;
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+}
+.checkerboard__rowA__white{
+    background: white;
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+}
+.checkerboard__rowB__black{
+    background: black;
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+}
+.checkerboard__rowB__white{
+    background: white;
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+}

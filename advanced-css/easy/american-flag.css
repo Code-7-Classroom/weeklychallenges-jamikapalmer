@@ -1,0 +1,26 @@
+.grid_container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+}
+
+body{
+    background-color: white;
+}
+
+.section_1 img{
+    position: absolute;
+}
+.section_2 .red{
+    background-color: red;
+    height: 63px;
+    width: 100%;
+}
+
+.section_2 .white{
+    background-color: white;
+    height: 63px;
+    width: 100%;
+}
+

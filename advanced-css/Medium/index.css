@@ -1,0 +1,24 @@
+.grid_container{
+    display: grid;
+    margin: 40px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 25px;
+}
+
+.product{
+    display: grid;
+    
+}
+.product img{
+    width: 100% ;
+}
+.product_text{
+    font-size: 12px;
+}
+
+h1 a{
+    text-decoration: none;
+    color: black;
+}
+
