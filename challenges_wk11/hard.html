@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheets" href="hard.css">
+    <title>Challenges</title>
+</head>
+<body>
+    <h1>Hard</h1>
+      <button class="redButton">
+        Turn it red!
+      </button>
+      <button class="whiteButton">
+        Turn it white!
+      </button>
+    <script>
+        let pageBody = document.querySelector('.body1');
+ 
+        let redButton = document.querySelector('.redButton');
+        let whiteButton = document.querySelector('.whiteButton');
+        
+        redButton.addEventListener('click', () => {
+            pageBody.classList.add('bg-red');
+            pageBody.classList.remove('bg-white');
+        });
+        
+        whiteButton.addEventListener('click',() => {
+            pageBody.classList.add('bg-white');
+            pageBody.classList.remove('bg-red');
+        
+        });
+    </script>
+</body>
+</html>

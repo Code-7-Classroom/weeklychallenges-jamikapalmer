@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges</title>
+</head>
+<body>
+    <h1>Very Hard</h1>
+    <script>
+        function singleChar(str) {
+        console.log(str);
+ 
+            for (let i = 0; i < str.length; i++) {
+                if (str.indexOf(str.charAt(i)) === str.lastIndexOf(str.charAt(i))) {
+                    console.log(str.charAt(i));
+                    break;
+                }
+            }
+        }
+ 
+ singleChar("the quick brown fox jumps over the calm kitten quietly");
+
+    </script>
+</body>
+</html>
