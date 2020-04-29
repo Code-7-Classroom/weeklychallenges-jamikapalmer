@@ -1,0 +1,64 @@
+{
+    "employees": [
+        {
+            "name": "kenya",
+            "id": 1,
+            "salary": 50000,
+            "job-title": "Junior web developer"
+        },
+        {
+            "name": "Cleo",
+            "id": 2,
+            "salary": 75000,
+            "job-title": " Intermediate developer"
+        },
+        {
+            "name": "David",
+            "id": 3,
+            "salary": 100000,
+            "job-title": "Senior web developer"
+        },
+        {
+            "name": "Ronda",
+            "id": 4,
+            "salary": 47000,
+            "job-title": "HR"
+        },
+        {
+            "name": "Rashad",
+            "id": 5,
+            "salary": 109000,
+            "job-title": "DevOps"
+        },
+        {
+            "name": "Paco",
+            "id": 6,
+            "salary": 500000,
+            "job-title": "CEO"
+        },
+        {
+            "name": "Alex",
+            "id": 7,
+            "salary": 90000,
+            "job-title": "Accounting"
+        },
+        {
+            "name": "Laura",
+            "id": 8,
+            "salary": 30000,
+            "job-title": "Waitress"
+        },
+        {
+            "name": "Masha",
+            "id": 9,
+            "salary": 210000,
+            "job-title": "Programmer"
+        },
+        {
+            "name": "Lynn",
+            "id": 10,
+            "salary": 50000,
+            "job-title": "Teacher"
+        }
+    ]
+}
